@@ -73,7 +73,6 @@ class MainActivity : ComponentActivity() {
                         ) {
 
                             items(imageUrls) { url ->
-
                                 Mirror(
                                     opacity = 0.89f,
                                     content = {
