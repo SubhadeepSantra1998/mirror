@@ -90,7 +90,7 @@ class MainActivity : ComponentActivity() {
                                             modifier = Modifier
                                                 .fillParentMaxWidth()
                                                 .height(300.dp)
-                                                .clip(RoundedCornerShape(4.dp)),
+                                                .clip(RoundedCornerShape(14.dp)),
                                             contentScale = ContentScale.Crop
                                         )
                                     }
