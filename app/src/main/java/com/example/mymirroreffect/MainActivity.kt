@@ -17,13 +17,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.request.ImageRequest
 import com.example.mymirroreffect.component.Mirror
@@ -40,7 +38,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier
                         .fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.primary
                 ) {
 
 
@@ -76,24 +74,27 @@ class MainActivity : ComponentActivity() {
 
                             items(imageUrls) { url ->
 
-                                Mirror {
-                                    Image(
-                                        painter = rememberCoilPainter(
-                                            request = ImageRequest.Builder(LocalContext.current)
-                                                .crossfade(durationMillis = 1000)
-                                                .data(url)
-                                                .placeholder(R.drawable.ic_placeholder)
-                                                .error(R.drawable.ic_placeholder)
-                                                .build()
-                                        ),
-                                        contentDescription = null,
-                                        modifier = Modifier
-                                            .fillParentMaxWidth()
-                                            .height(300.dp)
-                                            .clip(RoundedCornerShape(24.dp)),
-                                        contentScale = ContentScale.Crop
-                                    )
-                                }
+                                Mirror(
+                                    opacity = 0.89f,
+                                    content = {
+                                        Image(
+                                            painter = rememberCoilPainter(
+                                                request = ImageRequest.Builder(LocalContext.current)
+                                                    .crossfade(durationMillis = 1000)
+                                                    .data(url)
+                                                    .placeholder(R.drawable.ic_placeholder)
+                                                    .error(R.drawable.ic_placeholder)
+                                                    .build()
+                                            ),
+                                            contentDescription = null,
+                                            modifier = Modifier
+                                                .fillParentMaxWidth()
+                                                .height(300.dp)
+                                                .clip(RoundedCornerShape(4.dp)),
+                                            contentScale = ContentScale.Crop
+                                        )
+                                    }
+                                )
                             }
                         }
                     }

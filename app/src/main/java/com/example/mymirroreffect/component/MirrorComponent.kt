@@ -17,12 +17,16 @@ import com.example.mymirroreffect.utils.HalfSizeShape
 
 
 @Composable
-fun Mirror(content: @Composable () -> Unit) {
+fun Mirror(
+    content: @Composable () -> Unit,
+    opacity: Float = 0.89f
+) {
     Column {
         content()
         Box(modifier = Modifier
             .graphicsLayer {
-                alpha = 0.89f
+                //Reflection opacity
+                alpha = opacity
                 rotationX = 180f
             }
             .drawWithContent {
@@ -33,7 +37,11 @@ fun Mirror(content: @Composable () -> Unit) {
                     blendMode = BlendMode.DstIn
                 )
             }
-            .blur(radiusX = 1.dp, radiusY = 3.dp, BlurredEdgeTreatment.Unbounded)
+            .blur(
+                radiusX = 1.dp,
+                radiusY = 3.dp,
+                BlurredEdgeTreatment.Unbounded
+            )
             .clip(
                 HalfSizeShape
             )

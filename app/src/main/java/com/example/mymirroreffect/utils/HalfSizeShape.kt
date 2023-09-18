@@ -16,6 +16,4 @@ object HalfSizeShape : Shape {
     ): Outline = Outline.Rectangle(
         Rect(Offset(0f, size.height / 2), Size(size.width, size.height))
     )
-
-
 }
