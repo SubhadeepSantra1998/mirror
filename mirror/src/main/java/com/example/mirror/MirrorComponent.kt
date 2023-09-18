@@ -1,4 +1,4 @@
-package com.example.mymirroreffect.component
+package com.example.mirror
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,7 +13,6 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
-import com.example.mymirroreffect.utils.HalfSizeShape
 
 
 @Composable

@@ -24,7 +24,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.request.ImageRequest
-import com.example.mymirroreffect.component.Mirror
+import com.example.mirror.Mirror
 import com.example.mymirroreffect.ui.theme.MyMirrorEffectTheme
 import com.google.accompanist.coil.rememberCoilPainter
 

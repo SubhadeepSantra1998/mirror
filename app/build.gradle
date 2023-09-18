@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.mymirroreffect'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.mymirroreffect"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -66,4 +66,7 @@ dependencies {
 
     //Coil (Image Uploading)
     implementation 'com.google.accompanist:accompanist-coil:0.12.0'
+
+    //testing mirror library locally
+    implementation project(':mirror')
 }
