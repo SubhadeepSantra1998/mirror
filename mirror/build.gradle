@@ -50,7 +50,7 @@ afterEvaluate {
                 from components.release
 
                 groupId = 'com.github.Subhadeep'
-                artifactId = 'mirror-compose'
+                artifactId = 'Mirror-Effect'
                 version = '1.0'
             }
         }
