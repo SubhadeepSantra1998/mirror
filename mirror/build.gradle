@@ -60,7 +60,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.SubhadeepSantra1998'
                 artifactId = 'Mirror-Effect'
-                version = '1.7'
+                version = '1.8'
 
                 afterEvaluate {
                     from components.release
