@@ -37,7 +37,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.5.1'
+        kotlinCompilerExtensionVersion '1.3.2'
     }
     packagingOptions {
         resources {
@@ -68,6 +68,5 @@ dependencies {
     implementation 'com.google.accompanist:accompanist-coil:0.12.0'
 
     //testing mirror library locally
-    implementation project(':mirror')
-
+    //implementation project(':mirror')
 }
