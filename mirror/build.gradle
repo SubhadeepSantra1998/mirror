@@ -44,14 +44,27 @@ dependencies {
 }
 
 afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//
+//                groupId = 'com.github.SubhadeepSantra1998'
+//                artifactId = 'Mirror-Effect'
+//                version = '1.0'
+//            }
+//        }
+//    }
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
-
-                groupId = 'com.github.Subhadeep'
+                groupId = 'com.github.SubhadeepSantra1998'
                 artifactId = 'Mirror-Effect'
-                version = '1.0'
+                version = '1.7'
+
+                afterEvaluate {
+                    from components.release
+                }
             }
         }
     }
