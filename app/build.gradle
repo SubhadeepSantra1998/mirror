@@ -68,5 +68,5 @@ dependencies {
     implementation 'com.google.accompanist:accompanist-coil:0.12.0'
 
     //testing mirror library locally
-    //implementation project(':mirror')
+    implementation project(':mirror')
 }
