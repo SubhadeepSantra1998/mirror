@@ -43,29 +43,32 @@ dependencies {
     implementation 'androidx.compose.material3:material3'
 }
 
-afterEvaluate {
+//afterEvaluate {
 //    publishing {
 //        publications {
 //            release(MavenPublication) {
-//                from components.release
-//
 //                groupId = 'com.github.SubhadeepSantra1998'
-//                artifactId = 'Mirror-Effect'
-//                version = '1.0'
+//                artifactId = 'mirror'
+//                version = '2.0'
+//
+//                afterEvaluate {
+//                    from components.release
+//                }
 //            }
 //        }
 //    }
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId = 'com.github.SubhadeepSantra1998'
-                artifactId = 'Mirror-Effect'
-                version = '1.8'
+//}
 
-                afterEvaluate {
-                    from components.release
-                }
-            }
+
+// for testing maven locally
+afterEvaluate {
+    android.libraryVariants.each{ varient ->
+        publishing.publications.create(varient .name, MavenPublication){
+            from components.findByName(varient .name)
+
+            groupId = 'com.github.SubhadeepSantra1998'
+            artifactId = 'mirror'
+            version = '2.0'
         }
     }
 }
